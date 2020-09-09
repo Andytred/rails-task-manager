@@ -1,0 +1,9 @@
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+      <%= task.completed ? "[x]" : "[]" %>
+      <%= link_to task.title, task_path(task) %>
+    </li>
+  <% end %>
+</ul>
+
